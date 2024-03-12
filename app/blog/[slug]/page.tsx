@@ -4,6 +4,10 @@ import { client, urlFor } from "@/app/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
+
+// export const revalidate = 3600 // revalidate at most every hour
+export const revalidate = 30 // revalidate at 30 seconds
+
 async function getData(slug: string) {
   const query = `
     *[_type == "blog" && slug.current == '${slug}'] {
