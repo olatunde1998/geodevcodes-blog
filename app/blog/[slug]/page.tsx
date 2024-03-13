@@ -4,9 +4,8 @@ import { client, urlFor } from "@/app/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
-
 // export const revalidate = 3600 // revalidate at most every hour
-export const revalidate = 30 // revalidate at 30 seconds
+export const revalidate = 30; // revalidate at 30 seconds
 
 async function getData(slug: string) {
   const query = `
@@ -32,8 +31,8 @@ export default async function BlogArticle({
   return (
     <div className="mt-8">
       <h1>
-        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
-          Jan Marshal - Blog
+        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercas">
+          geodevcodes - Blog
         </span>
         <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
           {data.title}
